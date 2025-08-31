@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work Hours Logger</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Work Hour Logs</h1>
+    <div class="controls">
+      <button id="addDateBtn" class="primary-btn">+ Add Date</button>
+    </div>
+    <ul id="dateList" class="date-list"></ul>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <h2 id="modalDateTitle">Date</h2>
+      <div id="entriesContainer" class="entries-container"></div>
+      <button id="addEntryBtn" class="secondary-btn">Add Entry</button>
+      <div class="modal-actions">
+        <button id="cancelBtn" class="secondary-btn">Cancel</button>
+        <button id="saveBtn" class="primary-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
